@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function Person(name, age) {
+        //     this.fullName = fullName; //not defined
+        //     this.age = age;
+
+        //     this.getInfo = function() {
+        //         return function() {
+        //             console.log(this.constructor.name);
+        //             console.log("Tôi là " + this.fullName + ". " + this.age + " tuổi");
+        //         };
+        //     }
+        // }
+
+        // var p = new Person('Mỹ Linh ', 18);
+        // var printInfo = p.getInfo();
+        // printInfo();
+
+        function Person(fullName, age) {
+            this.fullName = fullName;
+            this.age = age;
+
+            this.getInfo = function() {
+                return () => {
+                    console.log(this.constructor.name); // this đề cập tới đối tượng Person
+                    console.log(`Tôi là ${this.fullName}. ${this.age} tuổi`);
+                };
+            }
+        }
+
+        var p = new Person('Mỹ Linh ', 18);
+        var printInfo = p.getInfo();
+        printInfo();
+    </script>
+</body>
+
+</html>
