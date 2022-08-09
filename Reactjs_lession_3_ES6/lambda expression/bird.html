@@ -32,11 +32,7 @@
             "Type": "Dove"
         }];
 
-        const codeBird = birds.map(myFunction);
-
-        function myFunction(code) {
-            return [code.Name];
-        }
+        const codeBird = birds.map(bird => bird.Name);
         console.log(codeBird);
     </script>
 </body>
