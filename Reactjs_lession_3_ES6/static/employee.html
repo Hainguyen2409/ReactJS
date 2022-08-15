@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Employee {
+            constructor(Code, firstName, lastName, Salary) {
+                this.Code = Code;
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.Salary = Salary;
+            }
+            getCode() {
+                return this.Code
+            };
+            get_fullname() {
+                return this.firstName + " " + this.lastName
+            };
+            get_salary() {
+                return this.Salary
+            };
+            get_annual_salary() {
+                return this.Salary * 12
+            };
+            get_raise_salary(percents) {
+                this.Salary += percents * this.Salary / 100
+            };
+        }
+
+        let employ = new Employee("ms12", "Hải", "Nguyễn", 50000);
+        console.log(employ.getCode());
+        console.log(employ.get_fullname());
+        console.log(employ.get_salary());
+        console.log(employ.get_annual_salary());
+        employ.get_raise_salary(10);
+        console.log(employ.get_salary());
+
+        class PartimeEmployee extends Employee {
+            constructor(Code, firstName, lastName, Salary, HourlyWage) {
+                super(Code, firstName, lastName, Salary);
+                this.HourlyWage = HourlyWage;
+                this.attenend = [];
+            }
+            checkattenend(month, noOfHours) {
+                if (month > 0 && month < 13) {
+                    this.attenend[month] = parseInt(noOfHours);
+                }
+                else {
+                    this.attenend[month] = 0;
+                }
+            }
+            get_salary(month = (new Date()).getMonth()) {
+                let noOfHours = this.attenend[month+ 1];
+                return noOfHours > 0 ? (noOfHours * this.HourlyWage) : 0;
+            }
+            get_annual_salary() {
+                let sum = 0;
+                this.attenend.map(month => sum += month);
+                return sum * this.HourlyWage;
+            }
+            get_raise_salary(percent) {
+                this.HourlyWage += this.HourlyWage * percent / 100;
+            }
+        }
+        let peny = new PartimeEmployee("NV123", "Hải", "Nguyễn", 20);
+        peny.checkattenend(3, 35);
+        peny.checkattenend(8, 40);
+        console.log(peny.get_salary());
+        console.log(peny.get_annual_salary());
+    </script>
+</body>
+
+</html>

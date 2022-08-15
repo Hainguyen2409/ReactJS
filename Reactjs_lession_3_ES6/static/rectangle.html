@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // class Rectangle {
+        //     constructor(chieuDai, chieuRong) {
+        //         this.chieuDai = chieuDai;
+        //         this.chieuRong = chieuRong;
+        //     }
+
+        //     static areaValue(chieuDai, chieuRong) {
+        //         return chieuDai * chieuRong;
+        //     }
+        //     static perimeterValue(chieuDai, chieuRong) {
+        //         return (chieuDai + chieuRong) * 2;
+        //     }
+        // }
+        // console.log(Rectangle.areaValue(5, 4));
+        // console.log(Rectangle.perimeterValue(5, 4));
+
+        class Rectangle {
+            constructor(Height, Width) {
+                this.Height = Height;
+                this.Width = Width;
+            }
+            getHeight() {
+                return this.Height
+            };
+            getWidth() {
+                return this.Width
+            };
+
+            getareaValue() {
+                return this.Height * this.Width
+            };
+            getperimeterValue() {
+                return (this.Height + this.Width) * 2
+            };
+        }
+
+        let rec = new Rectangle(20, 10);
+        console.log(rec.getareaValue());
+        console.log(rec.getperimeterValue());
+    </script>
+</body>
+
+</html>
