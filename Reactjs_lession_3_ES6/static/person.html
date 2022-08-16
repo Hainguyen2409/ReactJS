@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person {
+            constructor(name) {
+                this.name = name;
+            }
+            getname() {return this.name};
+            walk() {return(this.name + " " + "go to school")}; 
+        }
+        class Programmer extends Person {
+            constructor(name) {
+                super(name);
+            }
+            writeCode() {return (this.name + " " + "Code ReactJS")};
+        }
+
+        let person = new Programmer("Hải");
+        console.log(person.walk());
+        console.log(person.writeCode());
+
+
+    </script>
+</body>
+</html>
