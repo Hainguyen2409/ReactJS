@@ -23,11 +23,20 @@ React.createElement("li", {className: "Language"}, "C++"),
 React.createElement("li", {className: "Language"}, "Javascript"))
 );
 
+const myNameJSX = (
+  <div className="name" id="name"> 
+    <h1>Hải giò</h1>
+    <p>Hello world</p> 
+  </div>
+)
+
+const name = React.createElement("h1", {style: {textAlign: "center"}}, "Hải Giò");
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // programming
-  myName
+  name
 );
+
 //<React.StrictMode>
   //   <App />
   // </React.StrictMode>
