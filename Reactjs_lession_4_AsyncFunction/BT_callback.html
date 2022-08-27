@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // sử dụng callback function đơn giản
+        // function greetings (name, callback) {
+        //     console.log("Hi " + " " + name);
+        //     callback();
+        // }
+
+        // function callMe() {
+        //     console.log("Hi i am callback function");
+        // }
+
+        // function callYou() {
+        //     console.log("Hello world!");
+        // }
+
+        // greetings ("Hải", callMe);
+        // greetings ("Nam", callYou);
+
+        // // sử dụng callback function với setTimeout()
+        // function greet() {
+        //     console.log("Hello world!");
+        // }
+
+        // function sayName(name) {
+        //     console.log("Hello" + " " + name);
+        // }
+
+        // setTimeout(greet, 4000);
+        // sayName("Gấu");
+
+        // sử dụng callback function để đợi kết quả của lệnh gọi hàm trước đó trước khi câu lệnh tiếp theo được thực thi
+        function greet(name, myFunction) {
+            console.log("Hello World");
+            myFunction(name);
+        }
+
+        function sayName(name) {
+            console.log("hello" + " " + name);
+        }
+
+        setTimeout(greet, 2000, "john", sayName);
+    </script>
+</body>
+</html>
