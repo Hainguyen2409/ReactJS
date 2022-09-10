@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "bootstrap/dist/css/bootstrap.min.css";
+import ProfileId from './homework/Profile';
 
 const items = ["C++", "Java", "JS"];
 const programming = React.createElement("section", {id: "coding"}, 
@@ -34,7 +36,7 @@ const name = React.createElement("h1", {style: {textAlign: "center"}}, "Hải Gi
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  name
+  <Profile/>
 );
 
 //<React.StrictMode>
