@@ -5,12 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Arlert from './Component/Arlert';
+import Student from './Component/Student';
+import StudentInfo from './Component/Student';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div>
-    <Arlert text = "Cảnh báo! Tài nguyên bạn vừa truy cập không tồn tại."/>
-  </div>
+  <Student/>
 );
 
 // If you want to start measuring performance in your app, pass a function
