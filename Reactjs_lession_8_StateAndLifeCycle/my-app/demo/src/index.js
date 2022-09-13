@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Arlert from './Component/Arlert';
-import Student from './Component/Student';
-import StudentInfo from './Component/Student';
+import StateInfo from './Demo/StateInfo';
+import Car from './Demo/SetState';
+import Count from './Demo/Count';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Arlert/>
+  <Count/>
 );
 
 // If you want to start measuring performance in your app, pass a function
