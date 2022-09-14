@@ -6,10 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import StateInfo from './Demo/StateInfo';
 import Car from './Demo/SetState';
 import Count from './Demo/Count';
+import LifeCycleDemo from './Demo/LifeCycleDemo';
+import ConditionalRenderingDemo from './Demo/ConditionalRenderingDemo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Count/>
+  <ConditionalRenderingDemo/>
 );
 
 // If you want to start measuring performance in your app, pass a function
