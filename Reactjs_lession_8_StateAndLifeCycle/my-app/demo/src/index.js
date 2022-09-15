@@ -8,10 +8,13 @@ import Car from './Demo/SetState';
 import Count from './Demo/Count';
 import LifeCycleDemo from './Demo/LifeCycleDemo';
 import ConditionalRenderingDemo from './Demo/ConditionalRenderingDemo';
+import Color from './Demo/Color';
+import Delete from './Demo/Delete';
+import Login from './Demo/Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ConditionalRenderingDemo/>
+  <Login/>
 );
 
 // If you want to start measuring performance in your app, pass a function
