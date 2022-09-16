@@ -11,10 +11,11 @@ import ConditionalRenderingDemo from './Demo/ConditionalRenderingDemo';
 import Color from './Demo/Color';
 import Delete from './Demo/Delete';
 import Login from './Demo/Login';
+import ExpandApp from './Homework/ExpandApp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Login/>
+  <ExpandApp/>
 );
 
 // If you want to start measuring performance in your app, pass a function
