@@ -4,9 +4,11 @@ import './index.css';
 import App from './App';
 import LoginSuccess from './demo/LoginSuccess';
 import Counter from './demo/Counter';
+import { EffectDemo } from './demo/EffectDemo';
+import Selector from './demo/Selector';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
-  <Counter />
+  <Selector />
 );
