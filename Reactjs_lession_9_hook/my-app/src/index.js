@@ -7,9 +7,11 @@ import Counter from './demo/Counter';
 import { EffectDemo } from './demo/EffectDemo';
 import Selector from './demo/Selector';
 import Hello from './demo/HelloFromInput';
+import MyClock from './demo/Myclock';
+
 
 const container = document.getElementById('root');
 const root = createRoot(container);
-root.render(
-  <Hello />
+root.render( 
+  <MyClock />
 );
