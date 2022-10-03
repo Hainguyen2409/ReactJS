@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "bootstrap": "^5.2.1",
-    "react-scripts": "^5.0.1"
+    "formik": "^2.2.9",
+    "react-scripts": "^5.0.1",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "web-vitals": "^3.0.2"
