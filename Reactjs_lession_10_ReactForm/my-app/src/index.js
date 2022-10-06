@@ -8,11 +8,14 @@ import FileUploadPage from './Demo/Input';
 import BasicForm from './Demo/ValidationTest';
 import SignupForm from './Demo/Signup';
 import ValidateSignup from './Demo/ValidateForm';
+import SubmitForm from './Demo/DemoForm';
+import MultipleSubmit from './Demo/MutipleForm';
+import AgeFormValidate from './Demo/AgeValidateForm';
 
 
 
 const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
-  <ValidateSignup/>
+  <AgeFormValidate/>
 );
