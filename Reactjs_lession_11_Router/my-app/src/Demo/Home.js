@@ -1,4 +1,11 @@
-import React from 'react';
+import { useLocation } from "react-router-dom";
+
 export const Home = () => {
-    return <h1>This is Homepage</h1>
+    let {state} = useLocation();
+    console.log(state);
+    return (
+        <div className="container pt-3">
+           <p>Account: {state.username} - {state.password}</p>
+        </div>
+    )
 }
