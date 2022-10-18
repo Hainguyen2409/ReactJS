@@ -5,10 +5,10 @@ import Link from "next/link"
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <h1>This is homepage</h1>
-      <Link href='../posts/first-post'>
-        About
+    <div className="title">
+      Read {''}
+      <Link href="/posts/first-post">
+        <a>This page!</a>
       </Link>
     </div> 
   )

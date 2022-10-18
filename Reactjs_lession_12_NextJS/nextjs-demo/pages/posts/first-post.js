@@ -1,13 +1,18 @@
 import Link from "next/link";
-import styles from '../styles/About.module.css';
+import Layout from "../../Components/layout";
 
 export default function FirstPost() {
     return (
-        <div className={styles.First_Post}>
-            <h1>This is homepage</h1>
-            <Link href='/'>
-                Homepage
+        <Layout>
+            <head>
+                <title>First Post</title>
+            </head>
+        <h1>First Post</h1>
+        <h2>
+            <Link href="/">
+                <a>Back to Home</a>
             </Link>
-        </div>
+        </h2>
+        </Layout>
     )
 }
